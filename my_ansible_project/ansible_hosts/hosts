@@ -1,0 +1,2 @@
+[putty]
+10.12.120.116 ansible_ssh_user=weblogic 
