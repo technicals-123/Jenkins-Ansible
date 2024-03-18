@@ -1,1 +1,26 @@
+- name: Install Nginx
+  apt:
+    name: nginx
+    state: present
 
+- name: Start Nginx service
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+
+- name: Install Java (OpenJDK)
+  apt:
+    name: default-jdk
+    state: present
+
+- name: Install Tomcat
+  apt:
+    name: tomcat9
+    state: present
+
+- name: Start Tomcat service
+  service:
+    name: tomcat9
+    state: started
+    enabled: yes
