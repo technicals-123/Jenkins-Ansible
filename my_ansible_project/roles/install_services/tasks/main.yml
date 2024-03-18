@@ -5,10 +5,7 @@
 
 
 
-- name: Install Java (OpenJDK)
-  yum:
-    name: default-jdk
-    state: present
+
 
 - name: Install Tomcat
   yum:
