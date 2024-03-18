@@ -1,5 +1,5 @@
 - name: Install Nginx
-  apt:
+  yum:
     name: nginx
     state: present
 
@@ -10,12 +10,12 @@
     enabled: yes
 
 - name: Install Java (OpenJDK)
-  apt:
+  yum:
     name: default-jdk
     state: present
 
 - name: Install Tomcat
-  apt:
+  yum:
     name: tomcat9
     state: present
 
