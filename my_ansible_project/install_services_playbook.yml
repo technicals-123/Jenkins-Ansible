@@ -1,0 +1,5 @@
+- name: Install Nginx and Tomcat
+  hosts: putty
+  become: yes
+  roles:
+    - install_services
