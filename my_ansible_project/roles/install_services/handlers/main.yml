@@ -1,1 +1,9 @@
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
 
+- name: restart tomcat
+  service:
+    name: tomcat9
+    state: restarted
