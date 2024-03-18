@@ -9,11 +9,11 @@
 
 - name: Install Tomcat
   yum:
-    name: tomcat9
+    name: tomcat
     state: present
 
 - name: Start Tomcat service
   service:
-    name: tomcat9
+    name: tomcat
     state: started
     enabled: yes
