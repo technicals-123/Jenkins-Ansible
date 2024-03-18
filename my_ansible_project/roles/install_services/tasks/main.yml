@@ -1,19 +1,7 @@
-- name: Install Nginx
-  yum:
-    name: nginx
-    state: present
+- name: Include Nginx tasks
+  include_tasks: nginx.yml
+  when: "'nginx' in ansible_tags"
 
-
-
-
-
-- name: Install Tomcat
-  yum:
-    name: tomcat
-    state: present
-
-- name: Start Tomcat service
-  service:
-    name: tomcat
-    state: started
-    enabled: yes
+- name: Include Tomcat tasks
+  include_tasks: tomcat.yml
+  when: "'tomcat' in ansible_tags"
