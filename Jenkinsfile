@@ -3,8 +3,7 @@ pipeline {
 
     environment {
         SAUMYA_SSH_KEY = credentials('SAUMYA_SSH_KEY')
-        // WEBLOGIC_VM_IP = 'weblogic_vm_ip'
-        // SSH_USER = 'weblogic_user'
+        
     }
 
     stages {
