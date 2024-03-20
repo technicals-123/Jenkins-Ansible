@@ -16,12 +16,12 @@ pipeline {
                     withCredentials([sshUserPrivateKey(credentialsId: 'SAUMYA_SSH_KEY', keyFileVariable: 'SSH_KEY')]) {
                         if (params.services == 'nginx' || params.services == 'both') {
                             sh '''
-                                ansible-playbook -i my_ansible_project/inventory/hosts my_ansible_project/nginx.yml --private-key=$SSH_KEY --tags=nginx
+                                ansible-playbook -i my_ansible_project/inventory/hosts my_ansible_project/ninstall_services_playbook.yml --private-key=$SSH_KEY --tags=nginx
                             '''
                         }
                         if (params.services == 'tomcat' || params.services == 'both') {
                             sh '''
-                                ansible-playbook -i my_ansible_project/inventory/hosts my_ansible_project/tomcat.yml --private-key=$SSH_KEY --tags=tomcat
+                                ansible-playbook -i my_ansible_project/inventory/hosts my_ansible_project/install_services_playbook.yml --private-key=$SSH_KEY --tags=tomcat
                             '''
                         }
                     }
