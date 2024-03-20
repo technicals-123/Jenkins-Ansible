@@ -8,5 +8,5 @@
     name: tomcat
     state: started
     enabled: yes
- tags: ['tomcat']
+  tags: ['tomcat']
   
