@@ -21,7 +21,7 @@ pipeline {
                         }
                         if (params.services == 'tomcat' || params.services == 'both') {
                             sh '''
-                                ansible-playbook -i my_ansible_project/inventory/hosts my_ansible_project/install_services_playbook.yml --private-key=$SSH_KEY --tags=tomcat
+                                ansible-playbook -i my_ansible_project/inventory/hosts my_ansible_project/install_services_playbook.yml --tags=tomcat --private-key=$SSH_KEY 
                             '''
                         }
                     }
