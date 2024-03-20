@@ -2,4 +2,5 @@
   yum:
     name: nginx
     state: present
+  tags: ['nginx']
   
