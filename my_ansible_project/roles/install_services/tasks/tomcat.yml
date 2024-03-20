@@ -2,6 +2,7 @@
   yum:
     name: tomcat
     state: present
+  tags: ['tomcat']
 
 - name: Start Tomcat service
   service:
