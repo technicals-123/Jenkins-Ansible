@@ -1,7 +1,7 @@
 - name: Include Nginx tasks
   include_tasks: nginx.yml
-  when: "'nginx' in ansible_tags"
+  when: "'nginx' in ansible_run_tags"
 
 - name: Include Tomcat tasks
   include_tasks: tomcat.yml
-  when: "'tomcat' in ansible_tags"
+  when: "'tomcat' in ansible_run_tags"
