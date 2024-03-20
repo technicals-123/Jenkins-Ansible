@@ -4,4 +4,4 @@
 
 - name: Include Tomcat tasks
   include_tasks: tomcat.yml
-  # when: "'tomcat' in ansible_tags"
+  when: "'tomcat' in ansible_tags"
